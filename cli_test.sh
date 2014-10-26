@@ -53,6 +53,7 @@ testHelpShowsAllCommands()
   assertContains "\> install" "$OUTPUT" "Couldn't see install"
   assertContains "use" "$OUTPUT" "Couldn't see use"
   assertContains "list" "$OUTPUT" "Couldn't see list"
+  assertContains "create" "$OUTPUT" "Couldn't see create"
 }
 
 testBackupsOriginalWhenInstall()

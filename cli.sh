@@ -91,6 +91,8 @@ print_help_message() {
   fi
   echo "\t${purple}use ${NC}${grey}<file>${NC}"
   echo "\t  ${orange}>${NC}  Uses a hosts-version, see list with \`list\`-command"
+  echo "\t${purple}create ${NC}${grey}<new_name>${NC}"
+  echo "\t  ${orange}>${NC}  Creates as new host file, based on your original host file"
   echo "\t${purple}list${NC}"
   echo "\t  ${orange}>${NC}  See all available host files you can \`use\`"
 }

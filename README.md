@@ -14,21 +14,39 @@ Default install is in ```/usr/bin```, if you want to change it, add a PREFIX env
 
 ## Usage
 
-```hoster``` Without any argument, hoster prints the current active hostfile
+```hoster```
 
-```hoster install``` Install hoster into a path where all the hosts file are stored.
+Without any argument, hoster prints the current active hostfile
 
-```hoster use hostfile1``` Uses host file with filename ```hostfile1``` as the current, active host file.
+```hoster install```
 
-```hoster list``` Lists all the hosts file inside the folder where hoster is installed.
+Install hoster into a path where all the hosts file are stored.
+
+```hoster use hostfile1```
+
+Uses host file with filename ```hostfile1``` as the current, active host file.
+
+```hoster list```
+
+Lists all the hosts file inside the folder where hoster is installed.
+
+```hoster create hostfile1```
+
+Creates a new host file with filename ```hostfile1```, based on your original
 
 ## Testing, Building & Installing
 
-```make test``` Runs the test, shunit2 is needed for this ( https://code.google.com/p/shunit2/ )
+```make test```
 
-```make build``` Build an executable from the shellscript
+Runs the test, shunit2 is needed for this ( https://code.google.com/p/shunit2/ )
 
-```make install``` Installs the executable to /usr/bin/hoster. If you want to install elsewhere, just copy the ```hoster``` executable to wherever you want after running ```make build```
+```make build```
+
+Build an executable from the shellscript
+
+```make install```
+
+Installs the executable to /usr/bin/hoster. If you want to install elsewhere, just copy the ```hoster``` executable to wherever you want after running ```make build```
 
 ## Contributing
 
