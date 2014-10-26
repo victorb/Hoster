@@ -12,6 +12,16 @@ Default install is in ```/usr/bin```, if you want to change it, add a PREFIX env
 
 ```PREFIX=/home/victor/bin curl -L https://raw.githubusercontent.com/victorbjelkholm/Hoster/master/install.sh | sh```
 
+## Usage
+
+```hoster``` Without any argument, hoster prints the current active hostfile
+
+```hoster install``` Install hoster into a path where all the hosts file are stored.
+
+```hoster use hostfile1``` Uses host file with filename ```hostfile1``` as the current, active host file.
+
+```hoster list``` Lists all the hosts file inside the folder where hoster is installed.
+
 ## Testing, Building & Installing
 
 ```make test``` Runs the test, shunit2 is needed for this ( https://code.google.com/p/shunit2/ )
@@ -24,3 +34,8 @@ Default install is in ```/usr/bin```, if you want to change it, add a PREFIX env
 
 Just submit a Pull Request and/or report issues you find. If something is unclear,
 please help me make it better for others.
+
+## Planned features
+
+* "Namespaces" via dots in filenames
+* Autocompletion
