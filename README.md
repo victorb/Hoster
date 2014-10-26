@@ -8,6 +8,10 @@ Installing is a simple as ABC
 
 ```curl -L https://raw.githubusercontent.com/victorbjelkholm/Hoster/master/install.sh | sh```
 
+Default install is in ```/usr/bin```, if you want to change it, add a PREFIX environment variable before the curl command.
+
+```PREFIX=/home/victor/bin curl -L https://raw.githubusercontent.com/victorbjelkholm/Hoster/master/install.sh | sh```
+
 ## Testing, Building & Installing
 
 ```make test``` Runs the test, shunit2 is needed for this ( https://code.google.com/p/shunit2/ )
