@@ -134,7 +134,7 @@ if [ $installed = 0 ] ; then
   fi
 
   list_all_hosts() {
-    ls -1 $HOSTER_PATH
+    ls -1 --ignore='active' $HOSTER_PATH
   }
 
   if [ "$1" = 'list' ] ; then
