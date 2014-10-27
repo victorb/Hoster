@@ -32,12 +32,20 @@ createSampleHostFile()
   sed -i 's/maria/somethingElse/' $TEST_HOSTER_PATH/test1
 }
 
-assertContains() {
+checkContainment() {
   expected_substring="$1"
   actual_string="$2"
-  message="$3"
   echo "$actual_string" | grep -q "$expected_substring"
-  assertTrue "$message" $?
+}
+
+assertContains() {
+  checkContainment "$1" "$2"
+  assertTrue "$3" $?
+}
+
+assertDoesNotContain() {
+  checkContainment "$1" "$2"
+  assertFalse "$3" $?
 }
 
 testShowsAsNotInstalled()
@@ -107,7 +115,7 @@ testListShowsAllHostsFileInDirectory()
 
   assertContains "test1" "$OUTPUT" "Expected to see test1 in output"
   assertContains "original" "$OUTPUT" "Expected to see original in output"
-  assertContains "active" "$OUTPUT" "Expected to see active in output"
+  assertDoesNotContain "active" "$OUTPUT" "Expected not to see active in output"
 }
 
 testLSIsIdenticalToList()
